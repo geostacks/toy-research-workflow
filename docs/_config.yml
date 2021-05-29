@@ -1,0 +1,21 @@
+title: Jupyter Meets the Earth - Toy research workflows
+logo: images/jupyter-earth.png
+
+# html:
+#   use_edit_page_button: true
+#   use_repository_button: true
+#   use_issues_button: true
+#   baseurl: https://pangeo-data.github.io/jupyter-earth
+
+# bibtex_bibfiles:
+#  - bibliography.bib
+
+repository:
+  url: https://github.com/geostacks/toy-research-workflow
+  branch: main
+  path_to_book: docs
+
+launch_buttons:
+  notebook_interface: "jupyterlab" # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url: "https://mybinder.org"
+  # thebe: true
