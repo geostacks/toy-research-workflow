@@ -1,3 +1,5 @@
 # Jupyter Meets the Earth - A toy research workflow
 
-Icepyx.
+This is a simple workflow showing how Jupyter and Pangeo tools help develop a research project and share scientific results, specifically for the field of geoscience. 
+
+We will use the ICESat-2 data (elevation measuments from a satellite altimeter, stored as per measurement basis (point cloud data)) and conduct a crevasse density analysis. We use Icepyx as the main tool to search and access the data. Note this is meant to provide a generic workflow any earth science researchers may encounter. The data and the tools may be replaced by some other stuff, but the general scheme isn't changing: you have data and a specific tool to query/access/manipulate the data. You want to share your results and make them as reproducible as possible to the other. What can Jupyter/Pangeo tools do for that?

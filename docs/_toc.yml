@@ -1,13 +1,12 @@
-# Table of Content file reference: https://jupyterbook.org/customize/toc.html
-# Note that the file extensions (.md, .ipynb) are assumed
-- file: index
-
+format: jb-article
+root: index
+sections:
 - file: icesat2-crevasses/index
   sections:
-    - file: icesat2-crevasses/ideas
-    - file: icesat2-crevasses/getdata
-    - file: icesat2-crevasses/explore
-    - file: icesat2-crevasses/analysis
-    - file: icesat2-crevasses/results
-    - file: icesat2-crevasses/writeup
-    - file: icesat2-crevasses/reproduce
+  - file: icesat2-crevasses/ideas
+  - file: icesat2-crevasses/getdata
+  - file: icesat2-crevasses/explore
+  - file: icesat2-crevasses/analysis
+  - file: icesat2-crevasses/results
+  - file: icesat2-crevasses/writeup
+  - file: icesat2-crevasses/reproduce
