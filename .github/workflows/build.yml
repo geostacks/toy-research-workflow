@@ -15,12 +15,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.7
+    - name: Set up Python 3.8
       uses: s-weigand/setup-conda@v1
       with:
         update-conda: true
         conda-channels: conda-forge
-        python-version: 3.7
+        python-version: 3.8
 
     - name: Install dependencies
       run: |
@@ -32,7 +32,7 @@ jobs:
         jupyter-book build ./docs
     - name: Deploy to gh-pages
       if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v3.7.3
+      uses: peaceiris/actions-gh-pages@v3.8.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/_build/html
