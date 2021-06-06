@@ -1,6 +1,7 @@
-format: jb-article
-root: index
-sections:
+# Table of Content file reference: https://jupyterbook.org/customize/toc.html
+# Note that the file extensions (.md, .ipynb) are assumed
+- file: index
+
 - file: icesat2-crevasses/index
   sections:
   - file: icesat2-crevasses/ideas
