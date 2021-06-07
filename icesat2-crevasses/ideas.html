@@ -110,17 +110,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="explore.html">
-     Some data already here…
+     Explore the data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="analysis.html">
-     Time to import PD!
+     Analyze the data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="results.html">
-     Prepare publication-read results
+     Generate publication-ready results
     </a>
    </li>
    <li class="toctree-l2">
@@ -202,6 +202,31 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-an-idea-to-a-plan">
+   From an idea to a plan
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenges">
+   Challenges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goal-of-this-workflow">
+   Goal of this workflow
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -212,8 +237,29 @@
                 
   <div class="section" id="search-for-ideas">
 <h1>Search for ideas<a class="headerlink" href="#search-for-ideas" title="Permalink to this headline">¶</a></h1>
-<p>One day you notice this paper! <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2666017220300122">https://www.sciencedirect.com/science/article/pii/S2666017220300122</a></p>
-<p>ICESat-2 and crevasses</p>
+<p>Good reseach always starts from a good idea. And good idea does not come from nowhere – it requires a lot of reading and thinking. Searching for good ideas is the first step we need for any research project.</p>
+<div class="section" id="from-an-idea-to-a-plan">
+<h2>From an idea to a plan<a class="headerlink" href="#from-an-idea-to-a-plan" title="Permalink to this headline">¶</a></h2>
+<p>One day you notice this paper: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2666017220300122">https://www.sciencedirect.com/science/article/pii/S2666017220300122</a>. It introduces an algorithm called DDA-ice for analyzing crevasse morphology using ICESat-2 laser altimetry data.</p>
+<p>You think this is cool because crevass density on a glacier is thought to be an important factor to glacier hydrology, stability, etc. This paper shows that ICESat-2 data are capable for detecting crevass density, and DDA-ice is capable for that. You want to try DDA-ice immediately and analyze the glaciers in your study area.</p>
+</div>
+<div class="section" id="challenges">
+<h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">¶</a></h2>
+<p>However, the authors didn’t release a copy of their DDA-ice software with the paper. You typically have two ways to do:</p>
+<ol class="simple">
+<li><p>Email to the corresponding author and ask for the software and the documentation.</p></li>
+<li><p>Develop your own code for the same thing, although it is to invent the wheel twice.</p></li>
+</ol>
+<p>Unfortunately, both ways take a lot of time.</p>
+<p>Jupyter tools can help resovle this. These open-source packages make your work reusable, reproducible, and easily accessible to the other researchers.</p>
+</div>
+<div class="section" id="goal-of-this-workflow">
+<h2>Goal of this workflow<a class="headerlink" href="#goal-of-this-workflow" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Follow the work of Herzfeld et al. (2021) and analyze crevasse density using Jupyter tools</p></li>
+<li><p>To test our new algorithm, we will use ICESat-2 data over Negribreen, Svalbard, measured on August 5 2019, and reproduce Figure 6a of this paper.</p></li>
+</ol>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
