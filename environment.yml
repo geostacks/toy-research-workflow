@@ -10,4 +10,6 @@ dependencies:
   - matplotlib
   - ipywidgets
   - jupyter-book=0.10
-  - icepyx
+  - pip
+  - pip:
+    - icepyx
