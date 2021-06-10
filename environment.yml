@@ -9,6 +9,7 @@ dependencies:
   - scipy
   - matplotlib
   - ipywidgets
+  - ipympl
   - jupyter-book=0.10
   - pip
   - pip:
