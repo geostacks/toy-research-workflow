@@ -7,8 +7,8 @@ logo: images/jupyter-earth.png
 #   use_issues_button: true
 #   baseurl: https://pangeo-data.github.io/jupyter-earth
 
-# bibtex_bibfiles:
-#  - bibliography.bib
+bibtex_bibfiles:
+ - refs.bib
 
 repository:
   url: https://github.com/geostacks/toy-research-workflow
