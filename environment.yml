@@ -12,5 +12,7 @@ dependencies:
   - ipympl
   - jupyter-book=0.10
   - pip
+  - hdf5
+  - h5py
   - pip:
     - icepyx
