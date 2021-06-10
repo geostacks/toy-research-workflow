@@ -219,8 +219,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#goal-of-this-workflow">
-   Goal of this workflow
+  <a class="reference internal nav-link" href="#goals">
+   Goals
   </a>
  </li>
 </ul>
@@ -237,28 +237,32 @@
                 
   <div class="section" id="search-for-ideas">
 <h1>Search for ideas<a class="headerlink" href="#search-for-ideas" title="Permalink to this headline">¶</a></h1>
-<p>Good reseach always starts from a good idea. And good idea does not come from nowhere – it requires a lot of reading and thinking. Searching for good ideas is the first step we need for any research project.</p>
+<p>A good reseach always starts from a good idea. Finding a good idea requires a lot of reading and thinking, which is usually the first step for a research project.</p>
 <div class="section" id="from-an-idea-to-a-plan">
 <h2>From an idea to a plan<a class="headerlink" href="#from-an-idea-to-a-plan" title="Permalink to this headline">¶</a></h2>
-<p>One day you notice this paper: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2666017220300122">https://www.sciencedirect.com/science/article/pii/S2666017220300122</a>. It introduces an algorithm called DDA-ice for analyzing crevasse morphology using ICESat-2 laser altimetry data.</p>
-<p>You think this is cool because crevass density on a glacier is thought to be an important factor to glacier hydrology, stability, etc. This paper shows that ICESat-2 data are capable for detecting crevass density, and DDA-ice is capable for that. You want to try DDA-ice immediately and analyze the glaciers in your study area.</p>
+<p>One day we noticed this paper written by <a href="#id1"><span class="problematic" id="id2">:cite:t:`Herzfeld2021`</span></a>: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2666017220300122">https://www.sciencedirect.com/science/article/pii/S2666017220300122</a>. It introduces an algorithm called <strong>DDA-ice</strong> for analyzing crevasse morphology using ICESat-2 laser altimetry data. This looks really useful because glacier crevasses can influence glacier hydrology, dynamics, and mass balance through multiple processes (e.g., <a href="#id3"><span class="problematic" id="id4">:cite:t:`Colgan2016`</span></a>). This paper seeks to prove that ICESat-2 data have a potential to derive crevasse evolution on glacier surface. We wonder if we can use DDA-ice or a similar tool and analyze the glaciers in our study area.</p>
 </div>
 <div class="section" id="challenges">
 <h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">¶</a></h2>
-<p>However, the authors didn’t release a copy of their DDA-ice software with the paper. You typically have two ways to do:</p>
+<p>However, the authors didn’t release a copy of their DDA-ice package along with the paper. We typically have two solutions for this issue:</p>
 <ol class="simple">
-<li><p>Email to the corresponding author and ask for the software and the documentation.</p></li>
-<li><p>Develop your own code for the same thing, although it is to invent the wheel twice.</p></li>
+<li><p>Email to the corresponding author and ask for the software and the documentation. Perhaps for future collaboration as well. This might ensure that the software and the previous work can be best credited, as well as the research quality using this package. However, it takes time for researchers to communicate in person or over emails, and the development of software and the data analysis might be slow compared the data collection rate.</p></li>
+<li><p>Adopt the ideas from the paper and develop your own code for the same purpose (crevasse analysis). This is usually more time-consuming than the first method, regardless of the skill level of the researchers. Also, there will be a lot of effort we need to do with this new package to avoid inventing the wheel the third time, such as publishing software, quality assessment, and writing document. Despite of this additional work, this approach might improve the research efficiency and community-based development for this particular tool if the right sharing scheme is established.</p></li>
 </ol>
-<p>Unfortunately, both ways take a lot of time.</p>
-<p>Jupyter tools can help resovle this. These open-source packages make your work reusable, reproducible, and easily accessible to the other researchers.</p>
+<p>Jupyter tools aims to provide such a scheme. The open-source tools in this ecosystem help make your work (including text, data, figures, and code) reusable, reproducible, and easily accessible to the other researchers.</p>
 </div>
-<div class="section" id="goal-of-this-workflow">
-<h2>Goal of this workflow<a class="headerlink" href="#goal-of-this-workflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<p>For this toy workflow, we attempt to achieve these goals:</p>
 <ol class="simple">
-<li><p>Follow the work of Herzfeld et al. (2021) and analyze crevasse density using Jupyter tools</p></li>
-<li><p>To test our new algorithm, we will use ICESat-2 data over Negribreen, Svalbard, measured on August 5 2019, and reproduce Figure 6a of this paper.</p></li>
+<li><p>Using the ideas from <a href="#id5"><span class="problematic" id="id6">:cite:t:`Herzfeld2021`</span></a>, Develop a research workflow for analyzing glacier crevasse mophorlogy using Jupyter tools.</p></li>
+<li><p>Reproduce Figure 6a of the same paper using exactly the same data source: ICESat-2 data over Negribreen, Svalbard, measured on August 5 2019.</p></li>
+<li><p>Document each step in the workflow and make them as accessible and reproducible as posssible.</p></li>
 </ol>
+<div class="figure align-default" id="herzfeld-2021-fig6a">
+<a class="reference internal image-reference" href="../_images/Herzfeld_etal_SciRemoteSens_2021_fig6a.PNG"><img alt="../_images/Herzfeld_etal_SciRemoteSens_2021_fig6a.PNG" src="../_images/Herzfeld_etal_SciRemoteSens_2021_fig6a.PNG" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Figure 6a from <a href="#id7"><span class="problematic" id="id8">:cite:t:`Herzfeld2021`</span></a> showing the elevation profile along a particular ICESat-2 track and identification of glacier crevasses.</span><a class="headerlink" href="#herzfeld-2021-fig6a" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 
