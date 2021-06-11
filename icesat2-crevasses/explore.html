@@ -266,7 +266,7 @@
                 
   <div class="section" id="explore-the-data">
 <h1>Explore the data<a class="headerlink" href="#explore-the-data" title="Permalink to this headline">¶</a></h1>
-<p>We have downloaded the ICESat-2 data and saved them as <code class="docutils literal notranslate"><span class="pre">./download/processed_ATL03_20190805232841_05940403_004_01.h5</span></code>. Before diving into a specific analysis routine, let us see if we can have a general overview about the data using the Jupyter tools. This will give us some ideas for the remaining steps.</p>
+<p>We have downloaded the ICESat-2 data and saved them as <code class="docutils literal notranslate"><span class="pre">./download/processed_ATL03_20190805232841_05940403_004_01.h5</span></code>. Before diving into a specific analysis routine, let us see if we can have a general overview about the data using the Jupyter tools. For this stage, we want tools that provide quick access to data, preferably in many ways. And we also want to have some funcionaility to manually navigate to different part of the data. Jupyter’s language-agnostic nature (i.e., not bonded to any specific programming languages) and support to interactive plotting widgets are designed to address these needs.</p>
 <div class="tip admonition">
 <p class="admonition-title">Goals</p>
 <p>Explore the data file, including its data structure, size, geospatial information, and so on.</p>
@@ -283,80 +283,16 @@
 </div>
 </div>
 </div>
-<p>This string variable is now shared by the Python kernel and the shell environment. Note that we also use <code class="docutils literal notranslate"><span class="pre">grep</span></code> here because the full, nested data structure is very long, and we are only interested in the gt1l beam (which <span id="id1">[<span>Herzfeld2021</span>]</span> use in their study).</p>
+<p>This string variable is now shared by the Python kernel and the shell environment. Note that we also use <code class="docutils literal notranslate"><span class="pre">grep</span></code> here because the full, nested data structure is very long, and we are only interested in the gt1l beam (which <span id="id1">[<a class="reference internal" href="ideas.html#id7"><span>HTL+21</span></a>]</span> use in their study).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>h5ls -r <span class="nv">$filename</span> <span class="p">|</span> grep ^/gt1l
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>h5ls -r <span class="nv">$filename</span> <span class="p">|</span> grep ^/gt1l/heights
+<span class="o">!</span>h5ls -r <span class="nv">$filename</span> <span class="p">|</span> grep ^/gt1l/geolocation/segment
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/gt1l                    Group
-/gt1l/bckgrd_atlas       Group
-/gt1l/bckgrd_atlas/bckgrd_counts Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/bckgrd_counts_reduced Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/bckgrd_hist_top Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/bckgrd_int_height Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/bckgrd_int_height_reduced Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/bckgrd_rate Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/delta_time Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/pce_mframe_cnt Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/tlm_height_band1 Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/tlm_height_band2 Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/tlm_top_band1 Dataset {65016/Inf}
-/gt1l/bckgrd_atlas/tlm_top_band2 Dataset {65016/Inf}
-/gt1l/geolocation        Group
-/gt1l/geolocation/altitude_sc Dataset {993/Inf}
-/gt1l/geolocation/bounce_time_offset Dataset {993/Inf}
-/gt1l/geolocation/delta_time Dataset {993/Inf}
-/gt1l/geolocation/full_sat_fract Dataset {993/Inf}
-/gt1l/geolocation/near_sat_fract Dataset {993/Inf}
-/gt1l/geolocation/neutat_delay_derivative Dataset {993/Inf}
-/gt1l/geolocation/neutat_delay_total Dataset {993/Inf}
-/gt1l/geolocation/neutat_ht Dataset {993/Inf}
-/gt1l/geolocation/ph_index_beg Dataset {993/Inf}
-/gt1l/geolocation/pitch  Dataset {993/Inf}
-/gt1l/geolocation/podppd_flag Dataset {993/Inf}
-/gt1l/geolocation/range_bias_corr Dataset {993/Inf}
-/gt1l/geolocation/ref_azimuth Dataset {993/Inf}
-/gt1l/geolocation/ref_elev Dataset {993/Inf}
-/gt1l/geolocation/reference_photon_index Dataset {993/Inf}
-/gt1l/geolocation/reference_photon_lat Dataset {993/Inf}
-/gt1l/geolocation/reference_photon_lon Dataset {993/Inf}
-/gt1l/geolocation/roll   Dataset {993/Inf}
-/gt1l/geolocation/segment_dist_x Dataset {993/Inf}
-/gt1l/geolocation/segment_id Dataset {993/Inf}
-/gt1l/geolocation/segment_length Dataset {993/Inf}
-/gt1l/geolocation/segment_ph_cnt Dataset {993/Inf}
-/gt1l/geolocation/sigma_across Dataset {993/Inf}
-/gt1l/geolocation/sigma_along Dataset {993/Inf}
-/gt1l/geolocation/sigma_h Dataset {993/Inf}
-/gt1l/geolocation/sigma_lat Dataset {993/Inf}
-/gt1l/geolocation/sigma_lon Dataset {993/Inf}
-/gt1l/geolocation/solar_azimuth Dataset {993/Inf}
-/gt1l/geolocation/solar_elevation Dataset {993/Inf}
-/gt1l/geolocation/surf_type Dataset {993/Inf, 5}
-/gt1l/geolocation/tx_pulse_energy Dataset {993/Inf}
-/gt1l/geolocation/tx_pulse_skew_est Dataset {993/Inf}
-/gt1l/geolocation/tx_pulse_width_lower Dataset {993/Inf}
-/gt1l/geolocation/tx_pulse_width_upper Dataset {993/Inf}
-/gt1l/geolocation/velocity_sc Dataset {993/Inf, 3}
-/gt1l/geolocation/yaw    Dataset {993/Inf}
-/gt1l/geophys_corr       Group
-/gt1l/geophys_corr/dac   Dataset {993/Inf}
-/gt1l/geophys_corr/delta_time Dataset {993/Inf}
-/gt1l/geophys_corr/dem_flag Dataset {993/Inf}
-/gt1l/geophys_corr/dem_h Dataset {993/Inf}
-/gt1l/geophys_corr/geoid Dataset {993/Inf}
-/gt1l/geophys_corr/geoid_free2mean Dataset {993/Inf}
-/gt1l/geophys_corr/tide_earth Dataset {993/Inf}
-/gt1l/geophys_corr/tide_earth_free2mean Dataset {993/Inf}
-/gt1l/geophys_corr/tide_equilibrium Dataset {993/Inf}
-/gt1l/geophys_corr/tide_load Dataset {993/Inf}
-/gt1l/geophys_corr/tide_oc_pole Dataset {993/Inf}
-/gt1l/geophys_corr/tide_ocean Dataset {993/Inf}
-/gt1l/geophys_corr/tide_pole Dataset {993/Inf}
-/gt1l/heights            Group
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/gt1l/heights            Group
 /gt1l/heights/delta_time Dataset {312012/Inf}
 /gt1l/heights/dist_ph_across Dataset {312012/Inf}
 /gt1l/heights/dist_ph_along Dataset {312012/Inf}
@@ -369,37 +305,10 @@
 /gt1l/heights/ph_id_pulse Dataset {312012/Inf}
 /gt1l/heights/quality_ph Dataset {312012/Inf}
 /gt1l/heights/signal_conf_ph Dataset {312012/Inf, 5}
-/gt1l/signal_find_output Group
-/gt1l/signal_find_output/inlandwater Group
-/gt1l/signal_find_output/inlandwater/bckgrd_mean Dataset {127749/Inf}
-/gt1l/signal_find_output/inlandwater/bckgrd_sigma Dataset {127749/Inf}
-/gt1l/signal_find_output/inlandwater/delta_time Dataset {127749/Inf}
-/gt1l/signal_find_output/inlandwater/t_pc_delta Dataset {127749/Inf}
-/gt1l/signal_find_output/inlandwater/z_pc_delta Dataset {127749/Inf}
-/gt1l/signal_find_output/land Group
-/gt1l/signal_find_output/land/bckgrd_mean Dataset {37107/Inf}
-/gt1l/signal_find_output/land/bckgrd_sigma Dataset {37107/Inf}
-/gt1l/signal_find_output/land/delta_time Dataset {37107/Inf}
-/gt1l/signal_find_output/land/t_pc_delta Dataset {37107/Inf}
-/gt1l/signal_find_output/land/z_pc_delta Dataset {37107/Inf}
-/gt1l/signal_find_output/land_ice Group
-/gt1l/signal_find_output/land_ice/bckgrd_mean Dataset {70322/Inf}
-/gt1l/signal_find_output/land_ice/bckgrd_sigma Dataset {70322/Inf}
-/gt1l/signal_find_output/land_ice/delta_time Dataset {70322/Inf}
-/gt1l/signal_find_output/land_ice/t_pc_delta Dataset {70322/Inf}
-/gt1l/signal_find_output/land_ice/z_pc_delta Dataset {70322/Inf}
-/gt1l/signal_find_output/ocean Group
-/gt1l/signal_find_output/ocean/bckgrd_mean Dataset {54122/Inf}
-/gt1l/signal_find_output/ocean/bckgrd_sigma Dataset {54122/Inf}
-/gt1l/signal_find_output/ocean/delta_time Dataset {54122/Inf}
-/gt1l/signal_find_output/ocean/t_pc_delta Dataset {54122/Inf}
-/gt1l/signal_find_output/ocean/z_pc_delta Dataset {54122/Inf}
-/gt1l/signal_find_output/sea_ice Group
-/gt1l/signal_find_output/sea_ice/bckgrd_mean Dataset {54481/Inf}
-/gt1l/signal_find_output/sea_ice/bckgrd_sigma Dataset {54481/Inf}
-/gt1l/signal_find_output/sea_ice/delta_time Dataset {54481/Inf}
-/gt1l/signal_find_output/sea_ice/t_pc_delta Dataset {54481/Inf}
-/gt1l/signal_find_output/sea_ice/z_pc_delta Dataset {54481/Inf}
+/gt1l/geolocation/segment_dist_x Dataset {993/Inf}
+/gt1l/geolocation/segment_id Dataset {993/Inf}
+/gt1l/geolocation/segment_length Dataset {993/Inf}
+/gt1l/geolocation/segment_ph_cnt Dataset {993/Inf}
 </pre></div>
 </div>
 </div>
@@ -471,7 +380,7 @@
 </div>
 </div>
 <div class="section" id="plot-the-data">
-<h3>Plot the data<a class="headerlink" href="#plot-the-data" title="Permalink to this headline">¶</a></h3>
+<span id="sec-explore-plot"></span><h3>Plot the data<a class="headerlink" href="#plot-the-data" title="Permalink to this headline">¶</a></h3>
 <p>Plotting the data is a great way to obtain a brief overview. Using interactive matplotlib figures powered by <code class="docutils literal notranslate"><span class="pre">ipympl</span></code>, we can speed up the exploration and quickly focus on the key elements of our data.</p>
 <p>Use the following Notebook command to activate interactive matplotlib environment:</p>
 <div class="cell docutils container">
@@ -499,13 +408,13 @@
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "2b0bfd46a3bf4a82bd5021df7e311f06", "version_major": 2, "version_minor": 0}
-</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8c1ccf33d0&gt;]
+{"model_id": "cf1590a7c1284d64983de90783e37316", "version_major": 2, "version_minor": 0}
+</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f80ec072fd0&gt;]
 </pre></div>
 </div>
 </div>
 </div>
-<p>After a careful check up, we are able to locate the segment where <a class="reference internal" href="ideas.html#sec-ideas-goals"><span class="std std-ref">Figure 6a</span></a> of <span id="id2">[<span>Herzfeld2021</span>]</span> uses. (Note that the along-track distance readings are different because we are using a subset of the original data granule .)</p>
+<p>After a careful check up, we are able to locate the segment where <a class="reference internal" href="ideas.html#sec-ideas-goals"><span class="std std-ref">Figure 6a</span></a> of <span id="id2">[<a class="reference internal" href="ideas.html#id7"><span>HTL+21</span></a>]</span> uses. (Note that the along-track distance readings are different because we are using a subset of the original data granule .)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -517,7 +426,7 @@
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "ac57166a1cee4804a3206498e16bf15c", "version_major": 2, "version_minor": 0}
+{"model_id": "97fc4a0cc2d34e658f51b9c04ede788b", "version_major": 2, "version_minor": 0}
 </script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(320.0, 363.0)
 </pre></div>
 </div>
@@ -527,6 +436,12 @@
 <p class="admonition-title">Summary</p>
 <p>The Jupyter ecosystem provides multiple and interactive approaches to access and explore the data.</p>
 </div>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id5"><span class="brackets">HTL+21</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>Ute C. Herzfeld, Thomas Trantow, Matthew Lawson, Jacob Hans, and Gavin Medley. Surface heights and crevasse morphologies of surging and fast-moving glaciers from ICESat-2 laser altimeter data - Application of the density-dimension algorithm (DDA-ice) and evaluation using airborne altimeter and Planet SkySat data. <em>Science of Remote Sensing</em>, 3(May 2020):100013, 2021. URL: <a class="reference external" href="https://doi.org/10.1016/j.srs.2020.100013">https://doi.org/10.1016/j.srs.2020.100013</a>, <a class="reference external" href="https://doi.org/10.1016/j.srs.2020.100013">doi:10.1016/j.srs.2020.100013</a>.</p>
+</dd>
+</dl>
+</p>
 </div>
 </div>
 </div>

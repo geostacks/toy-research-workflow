@@ -31,3 +31,7 @@ name: Herzfeld_2021_fig6a
 ---
 Figure 6a from {cite}`Herzfeld2021` showing the elevation profile along a particular ICESat-2 track and identification of glacier crevasses.
 ```
+
+```{bibliography}
+:filter: docname in docnames
+```
