@@ -14,5 +14,6 @@ dependencies:
   - pip
   - hdf5
   - h5py
+  - xarray
   - pip:
     - icepyx

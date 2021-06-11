@@ -10,6 +10,8 @@ logo: images/jupyter-earth.png
 bibtex_bibfiles:
  - refs.bib
 
+bibtex_reference_style: author_year
+
 repository:
   url: https://github.com/geostacks/toy-research-workflow
   branch: main
