@@ -15,5 +15,9 @@ dependencies:
   - hdf5
   - h5py
   - xarray
+  - pandas
+  - seaborn
+  - geopandas
+  - ipyleaflet
   - pip:
     - icepyx
