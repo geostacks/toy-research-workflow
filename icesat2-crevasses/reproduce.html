@@ -211,31 +211,28 @@
   <a class="reference internal nav-link" href="#manage-the-entire-work-not-only-the-final-paper">
    Manage the entire work, not only the final paper
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#github-and-zenodo">
-   Github and Zenodo
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-gitignore">
-     Set
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .gitignore
-      </span>
-     </code>
+    <a class="reference internal nav-link" href="#zenodo-for-data">
+     Zenodo for data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-license-and-readme">
-     Create a license and readme
+    <a class="reference internal nav-link" href="#github-for-code-and-documentation">
+     Github for code and documentation
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#automated-github-actions">
-     Automated Github Actions
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apply-a-license">
+       1. Apply a license
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#make-github-actions">
+       2. Make Github Actions
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -243,18 +240,6 @@
   <a class="reference internal nav-link" href="#use-binder-to-share-and-reproduce-the-work-in-just-one-click">
    Use Binder to share and reproduce the work in just one click
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-environment-yml">
-     Set
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       environment.yml
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -270,37 +255,64 @@
                 
   <div class="section" id="publish-and-reproduce-the-work">
 <h1>Publish and reproduce the work<a class="headerlink" href="#publish-and-reproduce-the-work" title="Permalink to this headline">¶</a></h1>
+<p>Finally we have finished the analysis and the writeup, and now it is time to publish our work somewhere. For this case we choose to publish the toy workflow as webpages linked to the Github repository, but the steps and points we consider here also apply to different publishing scenarios, no matter whether the material is peer-reviewed or not.</p>
+<p>It is also important to advertise/publicize our work. One key point we have to keep in mind is how easy the other researchers can access and reproduce the entire workflow and results. There are at least two benefits by maximizing the reproducibility of the work:</p>
+<ol class="simple">
+<li><p>It allows readers to quickly understand our work, so we can pay less effort to advertise it.</p></li>
+<li><p>The other researchers can easily build new analysis on top of our work, advancing our understanding of the Earth with a fast rate.</p></li>
+</ol>
+<p>In this section, we will introduce what we have done for publicizing and reproducing our glacier crevass analysis.</p>
 <div class="section" id="manage-the-entire-work-not-only-the-final-paper">
 <h2>Manage the entire work, not only the final paper<a class="headerlink" href="#manage-the-entire-work-not-only-the-final-paper" title="Permalink to this headline">¶</a></h2>
+<p>The final, peer-reviewed journal paper might be something we want to achieve at last. Besides this polished, concentrated piece of writing, it requires more to give to readers for them to understand and follow details of our work, including but not limited to:</p>
 <ul class="simple">
-<li><p>Text-based report (academic papers, technical reports, etc.)</p></li>
 <li><p>Source and derived data</p></li>
-<li><p>Code and workflow to generate results</p></li>
+<li><p>Code and workflow for generate results, figures, and tables</p></li>
 <li><p>Documentation (user guide, data availability statement, code comments, etc.)</p></li>
+<li><p>References, bibliogrpahy, cross-links, or something else for readers to get more information if needed</p></li>
 </ul>
+<!-- - Text-based report (academic papers, technical reports, etc.) -->
+<p>The geosicence community has done a good job for some of them. For example, a good portion of us use EndNote, Mendeley, or Zotero to manage references and citations. For the other part on the list, we are just starting to be aware of them.</p>
+<div class="section" id="zenodo-for-data">
+<h3>Zenodo for data<a class="headerlink" href="#zenodo-for-data" title="Permalink to this headline">¶</a></h3>
+<p>Many publishers with a focus of geoscience studies have proposed some guidelines for open and share data and software (for example, here are <a class="reference external" href="https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors">AGU’s FAIR data policy and guidelines</a>). <a class="reference external" href="https://zenodo.org/">Zenodo</a> is now gradually becoming a popular choice for data and software hosting as an upload batch to Zenodo can be assigned with a DOI and can be linked to the associated publication(s).</p>
 </div>
-<div class="section" id="github-and-zenodo">
-<h2>Github and Zenodo<a class="headerlink" href="#github-and-zenodo" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="set-gitignore">
-<h3>Set <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code><a class="headerlink" href="#set-gitignore" title="Permalink to this headline">¶</a></h3>
-<p>keep the core, skip the derived things.</p>
+<div class="section" id="github-for-code-and-documentation">
+<h3>Github for code and documentation<a class="headerlink" href="#github-for-code-and-documentation" title="Permalink to this headline">¶</a></h3>
+<p>For projects that are activately updating, hosting code and documentation on a Github repository has several advantages. Beside the reader accessibliy, we can also deploy some automated workflows to update web-hosted documents and save time (see below). The repository of this glacier crevass analysis can be found <a class="reference external" href="https://github.com/geostacks/toy-research-workflow">here</a>. The subsections below are some important points we did for creating the repository.</p>
+<div class="section" id="apply-a-license">
+<h4>1. Apply a license<a class="headerlink" href="#apply-a-license" title="Permalink to this headline">¶</a></h4>
+<p>A license might not look critical to this research project, but it does tell the audience what they can do with the content presented here. We use an <a class="reference external" href="https://opensource.org/licenses/MIT">MIT license</a> here, which is a permissive license and grants users ample room to use, reuse, and modify this work.</p>
+<div class="figure align-default" id="fig-workflow-license">
+<img alt="../_images/toy_workflow_license.PNG" src="../_images/toy_workflow_license.PNG" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Our ICESat-2 sees glacier crevasses project is released with an MIT license.</span><a class="headerlink" href="#fig-workflow-license" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="create-a-license-and-readme">
-<h3>Create a license and readme<a class="headerlink" href="#create-a-license-and-readme" title="Permalink to this headline">¶</a></h3>
-<p>let people know how to use them.</p>
 </div>
-<div class="section" id="automated-github-actions">
-<h3>Automated Github Actions<a class="headerlink" href="#automated-github-actions" title="Permalink to this headline">¶</a></h3>
-<p>save your time for publishing results.</p>
+<div class="section" id="make-github-actions">
+<h4>2. Make Github Actions<a class="headerlink" href="#make-github-actions" title="Permalink to this headline">¶</a></h4>
+<p>Whenever there is an update being pushed to this repository, the corrsponding html pages will be updated automatically. The tool behind the scenes is <a class="reference external" href="https://github.com/features/actions">Github Actions</a>, which runs workflow stored in the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> folder. For this crevasse analysis, we write a <a class="reference external" href="https://github.com/geostacks/toy-research-workflow/blob/main/.github/workflows/build.yml">workflow</a> that installs necessary packages (for executing Notebooks), builds Jupyter Book htmls, and deploy the htmls to Github pages (the links you are reading right now).</p>
+<p>To install necessary packages, we make an <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file in the repo specifying tools used in the workflow. You can <a class="reference external" href="https://github.com/geostacks/toy-research-workflow/blob/main/environment.yml">view this file here</a> for ideas about its format. We will need the same file to run Binder as well (see below).</p>
+<div class="figure align-default" id="fig-workflow-actions">
+<img alt="../_images/toy_workflow_actions.PNG" src="../_images/toy_workflow_actions.PNG" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Github Actions execute the <code class="docutils literal notranslate"><span class="pre">build-docs</span></code> workflow automatically after each push.</span><a class="headerlink" href="#fig-workflow-actions" title="Permalink to this image">¶</a></p>
+</div>
+<!-- ### 1. Create readme -->
+<!-- ### Set `.gitignore`
+
+keep the core, skip the derived things.
+ -->
+</div>
 </div>
 </div>
 <div class="section" id="use-binder-to-share-and-reproduce-the-work-in-just-one-click">
 <h2>Use Binder to share and reproduce the work in just one click<a class="headerlink" href="#use-binder-to-share-and-reproduce-the-work-in-just-one-click" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://mybinder.org/">mybinder.org</a></p>
-<div class="section" id="set-environment-yml">
-<h3>Set <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code><a class="headerlink" href="#set-environment-yml" title="Permalink to this headline">¶</a></h3>
-<p>List of necessary packages.</p>
+<p>To make this workflow as reproducive as possible, we use a cloud-based service called <a class="reference external" href="https://mybinder.org/">Binder</a>. The Binder service can turn a public repository into a live server where you can execute Notebooks, Python files, and other contents, as long as we provide a list of required packages (that is, <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>).</p>
+<p>We can use Binder independently for single or more Notebooks in a repository, as we have seen in many EarthCube submissions. We can also just use Jupyter Book to complie the work since Jupyter Book integrates the Binder service well. If the source file of a Jupyter Book page is Notebook, there will be a Binder link in the upper right of the page (Figure <span class="xref std std-ref">fig:fig:binder-link</span>) for readers to directly execute it.</p>
+<div class="figure align-default" id="fig-binder-link">
+<img alt="../_images/find_binder_link.PNG" src="../_images/find_binder_link.PNG" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">For each Notebook page, the Binder link allows readers to execute it.</span><a class="headerlink" href="#fig-binder-link" title="Permalink to this image">¶</a></p>
 </div>
+<p>Hence, sharing and reproducing this Negribreen crevasse analysis can’t be made easier than that.</p>
 </div>
 </div>
 
