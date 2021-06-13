@@ -65,7 +65,7 @@ keep the core, skip the derived things.
 
 To make this workflow as reproducive as possible, we use a cloud-based service called [Binder](https://mybinder.org/). The Binder service can turn a public repository into a live server where you can execute Notebooks, Python files, and other contents, as long as we provide a list of required packages (that is, `environment.yml`). 
 
-We can use Binder independently for single or more Notebooks in a repository, as we have seen in many EarthCube submissions. We can also just use Jupyter Book to complie the work since Jupyter Book integrates the Binder service well. If the source file of a Jupyter Book page is Notebook, there will be a Binder link in the upper right of the page (Figure {ref}`fig:fig:binder-link`) for readers to directly execute it.
+We can use Binder independently for single or more Notebooks in a repository, as we have seen in many EarthCube submissions. We can also just use Jupyter Book to complie the work since Jupyter Book integrates the Binder service well. If the source file of a Jupyter Book page is Notebook, there will be a Binder link in the upper right of the page (Figure {ref}`fig:binder-link`) for readers to directly execute it.
 
 ```{figure} images/find_binder_link.PNG
 ---

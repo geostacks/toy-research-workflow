@@ -5,19 +5,19 @@ channels:
   - defaults
 dependencies:
   - python=3.8
-  - numpy
-  - scipy
-  - matplotlib
-  - ipywidgets
-  - ipympl
-  - jupyter-book=0.10
-  - pip
+  - geopandas
   - hdf5
   - h5py
-  - xarray
-  - pandas
-  - seaborn
-  - geopandas
   - ipyleaflet
+  - ipympl
+  - ipywidgets
+  - jupyter-book=0.10
+  - matplotlib
+  - numpy
+  - pandas
+  - pip
+  - scipy
+  - seaborn
+  - xarray
   - pip:
     - icepyx

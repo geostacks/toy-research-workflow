@@ -1,11 +1,13 @@
-title: Jupyter Meets the Earth - Toy research workflows
-logo: images/jupyter-earth.png
+title          : Jupyter Meets the Earth - Toy research workflows
+author         : The Jupyter Meets the Earth Team 
+copyright      : "2021"  
+logo           : images/jupyter-earth.png
 
-# html:
-#   use_edit_page_button: true
-#   use_repository_button: true
-#   use_issues_button: true
-#   baseurl: https://pangeo-data.github.io/jupyter-earth
+html:
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  baseurl: https://geostacks.github.io/toy-research-workflow
 
 bibtex_bibfiles:
  - refs.bib
@@ -23,4 +25,6 @@ launch_buttons:
   # thebe: true
   
 execute:
-  execute_notebooks: 'off'
+  execute_notebooks : 'false'
+  timeout           : 30
+  allow_errors      : false
