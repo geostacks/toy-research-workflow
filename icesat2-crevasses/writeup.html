@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reproducibility" href="reproduce.html" />
+    <link rel="next" title="Publish and reproduce the work" href="reproduce.html" />
     <link rel="prev" title="Generate publication-ready results" href="results.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -130,7 +130,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="reproduce.html">
-     Reproducibility
+     Publish and reproduce the work
     </a>
    </li>
   </ul>
@@ -209,23 +209,31 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mixing-all-components-together-notebook">
-   Mixing all components together: Notebook
+  <a class="reference internal nav-link" href="#mixing-all-components-together-jupyter-notebook-and-beyond">
+   Mixing all components together: Jupyter Notebook and beyond
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-jupyter-book-to-organize-and-present-your-work">
+     Use Jupyter Book to organize and present your work
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-in-the-myst-markup-format">
+     Write in the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       MyST
+      </span>
+     </code>
+     markup format
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#writing-documentation-rest-md-and-myst">
-   Writing documentation: ReST, MD, and MyST
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#writeup-collaboration">
-   Writeup collaboration
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#include-references">
-   Include references
+  <a class="reference internal nav-link" href="#collaborate-using-jupyter">
+   Collaborate using Jupyter
   </a>
  </li>
 </ul>
@@ -242,17 +250,40 @@
                 
   <div class="section" id="write-a-report">
 <h1>Write a report<a class="headerlink" href="#write-a-report" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="mixing-all-components-together-notebook">
-<h2>Mixing all components together: Notebook<a class="headerlink" href="#mixing-all-components-together-notebook" title="Permalink to this headline">¶</a></h2>
+<p>We have finished our analysis and plan to conclude it with a written report. We may select to write an academic paper (for scientific findings), a technical report (for details of ICESat-2 data processes), a software documentation (for guides to use this new algorithm), or other kinds of format. Despite having various purposes, there are common key parts during academic writing, and Jupyter tools can also help expedite this process. Here we have listed some examples.</p>
+<div class="section" id="mixing-all-components-together-jupyter-notebook-and-beyond">
+<h2>Mixing all components together: Jupyter Notebook and beyond<a class="headerlink" href="#mixing-all-components-together-jupyter-notebook-and-beyond" title="Permalink to this headline">¶</a></h2>
+<p>As you may have seen a lot during the EarthCube meeting, Jupyter Notebook (as well as <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html">JupyterLab</a>, Jupyter’s Next-Generation Notebook Interface) lets researchers present their workflows and results in one place, including text, code, equations, and figures. We also wrote some of the pages in this workflow (specifically <a class="reference internal" href="getdata.html"><span class="doc">Get data</span></a>, <a class="reference internal" href="explore.html"><span class="doc">Explore the data</span></a>, <a class="reference internal" href="analysis.html"><span class="doc">Analyze the data</span></a>, and <a class="reference internal" href="results.html"><span class="doc">Generate publication-ready results</span></a>) using Notebook. You can find a link to the source Notebook file by hovering over the download icon in the upper right of the page (<a class="reference internal" href="#fig-find-ipynb-link"><span class="std std-ref">The link to the source Jupyter Notebook file.</span></a>).</p>
+<div class="figure align-default" id="fig-find-ipynb-link">
+<a class="reference internal image-reference" href="../_images/find_ipynb_link.PNG"><img alt="../_images/find_ipynb_link.PNG" src="../_images/find_ipynb_link.PNG" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">The link to the source Jupyter Notebook file.</span><a class="headerlink" href="#fig-find-ipynb-link" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="writing-documentation-rest-md-and-myst">
-<h2>Writing documentation: ReST, MD, and MyST<a class="headerlink" href="#writing-documentation-rest-md-and-myst" title="Permalink to this headline">¶</a></h2>
+<p>You can also go to our <a class="reference external" href="https://github.com/geostacks/toy-research-workflow/tree/main/docs">Github repository</a> and access those Notebook files. The <a class="reference external" href="https://nbviewer.jupyter.org/">nbviewer</a> service can help read and display them on a web browser; see <a class="reference internal" href="reproduce.html"><span class="doc">Publish and reproduce the work</span></a> for more information.</p>
+<div class="section" id="use-jupyter-book-to-organize-and-present-your-work">
+<h3>Use Jupyter Book to organize and present your work<a class="headerlink" href="#use-jupyter-book-to-organize-and-present-your-work" title="Permalink to this headline">¶</a></h3>
+<p>Each section in this toy workflow is written in either Notebook or Markdown format. To organize different pieces in a research project, we use <a class="reference external" href="https://jupyterbook.org/">Jupyter Book</a> and render these Notebook and Markdown files as a bunch of interconnected html files. This process is simple and does not require much additional work. All we need are a few additional files to let Jupyter Book know how to complie this book:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> : general settings of the book, such as layout, Notebook execution, and launch buttons.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>: table of content. Defines book structure, chapters, and sections.</p></li>
+<li><p>references as <code class="docutils literal notranslate"><span class="pre">.bib</span></code> format: for managing references. Optinal.</p></li>
+</ul>
+<p>Once we have these files ready, install <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> and run the following commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter book build ./docs
+</pre></div>
 </div>
-<div class="section" id="writeup-collaboration">
-<h2>Writeup collaboration<a class="headerlink" href="#writeup-collaboration" title="Permalink to this headline">¶</a></h2>
+<p>and the html output (as you have seen on these web posts) will be generated under <code class="docutils literal notranslate"><span class="pre">./docs/_build/html</span></code>.</p>
 </div>
-<div class="section" id="include-references">
-<h2>Include references<a class="headerlink" href="#include-references" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="write-in-the-myst-markup-format">
+<h3>Write in the <code class="docutils literal notranslate"><span class="pre">MyST</span></code> markup format<a class="headerlink" href="#write-in-the-myst-markup-format" title="Permalink to this headline">¶</a></h3>
+<p>There are three mainstream choices for academic writing: Word-like apps (Microsoft Word, Google Docs, OpenOffice Writer, etc.), LaTeX-based packages/apps (TeX Live, Overleaf, etc.), and other markup languages such as Markdown and reStructuredText. Many academic journals accept the first two as the preferred submission format, while Markdown and reStructuredText are widely used for technical documents.</p>
+<p>When we are writing Jupyter Book pages in either <code class="docutils literal notranslate"><span class="pre">.md</span></code> or <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> format, we are acutally using a new type of markup languages called <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST</a> (Markedly Structured Text). MyST combines the advantages of Markdown and reStructuredText and supports other necessary elements in academic writing, including LaTex math and citation syntax. You can find examples <a class="reference internal" href="getdata.html"><span class="doc">Get data</span></a> and other pages in this toy workflow shoing how these elements are implemented.</p>
+</div>
+</div>
+<div class="section" id="collaborate-using-jupyter">
+<h2>Collaborate using Jupyter<a class="headerlink" href="#collaborate-using-jupyter" title="Permalink to this headline">¶</a></h2>
+<p>As long as the Jupyter book documents are hosted on an open repository such as Github, we can invite collaborators to contribute and work on the same project. <code class="docutils literal notranslate"><span class="pre">git</span></code> and the Github service used to be popular in only certain programming-related communities, but now it becomes a useful tool for academic collaborators with the help of Jupyter Notebooks.</p>
+<p>One of the future directions for collaborating using Jupyter is the <a class="reference external" href="https://jupyterlab-rtc.readthedocs.io/en/latest/">Jupyter RTC</a> (real time collaboration) project. It will allow users to edit the same Notebook at the same time, and the changes can be immediately reflected to the other users, just like the way we use Google Docs.</p>
+<!-- Despited still being activaly developing, the [Jupyter RTC](https://jupyterlab-rtc.readthedocs.io/en/latest/) (real time collaboration) project aims to provide collaborative components of writing a Notebook. -->
 </div>
 </div>
 
@@ -282,7 +313,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="results.html" title="previous page">Generate publication-ready results</a>
-    <a class='right-next' id="next-link" href="reproduce.html" title="next page">Reproducibility</a>
+    <a class='right-next' id="next-link" href="reproduce.html" title="next page">Publish and reproduce the work</a>
 
         </div>
         

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reproducibility &#8212; Jupyter Meets the Earth - Toy research workflows</title>
+    <title>Publish and reproduce the work &#8212; Jupyter Meets the Earth - Toy research workflows</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -129,7 +129,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Reproducibility
+     Publish and reproduce the work
     </a>
    </li>
   </ul>
@@ -208,34 +208,45 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#manage-your-entire-work-not-only-the-final-paper">
-   Manage your entire work, not only the final paper
+  <a class="reference internal nav-link" href="#manage-the-entire-work-not-only-the-final-paper">
+   Manage the entire work, not only the final paper
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-and-zenodo">
+   Github and Zenodo
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#set-gitignore">
-     Set .gitignore
+     Set
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .gitignore
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-license-and-readme">
+     Create a license and readme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automated-github-actions">
+     Automated Github Actions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-license-and-readme">
-   Create a license and readme
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jupyter-book-things-you-are-reading-now-automated-github-actions">
-   Jupyter Book (things you are reading now), automated Github Actions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#binder-run-your-work-with-just-one-click">
-   Binder: run your work with just one click
+  <a class="reference internal nav-link" href="#use-binder-to-share-and-reproduce-the-work-in-just-one-click">
+   Use Binder to share and reproduce the work in just one click
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#environment-yml">
+    <a class="reference internal nav-link" href="#set-environment-yml">
+     Set
      <code class="docutils literal notranslate">
       <span class="pre">
        environment.yml
@@ -257,24 +268,38 @@
         
               <div>
                 
-  <div class="section" id="reproducibility">
-<h1>Reproducibility<a class="headerlink" href="#reproducibility" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="manage-your-entire-work-not-only-the-final-paper">
-<h2>Manage your entire work, not only the final paper<a class="headerlink" href="#manage-your-entire-work-not-only-the-final-paper" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="set-gitignore">
-<h3>Set .gitignore<a class="headerlink" href="#set-gitignore" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="publish-and-reproduce-the-work">
+<h1>Publish and reproduce the work<a class="headerlink" href="#publish-and-reproduce-the-work" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="manage-the-entire-work-not-only-the-final-paper">
+<h2>Manage the entire work, not only the final paper<a class="headerlink" href="#manage-the-entire-work-not-only-the-final-paper" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Text-based report (academic papers, technical reports, etc.)</p></li>
+<li><p>Source and derived data</p></li>
+<li><p>Code and workflow to generate results</p></li>
+<li><p>Documentation (user guide, data availability statement, code comments, etc.)</p></li>
+</ul>
 </div>
+<div class="section" id="github-and-zenodo">
+<h2>Github and Zenodo<a class="headerlink" href="#github-and-zenodo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="set-gitignore">
+<h3>Set <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code><a class="headerlink" href="#set-gitignore" title="Permalink to this headline">¶</a></h3>
+<p>keep the core, skip the derived things.</p>
 </div>
 <div class="section" id="create-a-license-and-readme">
-<h2>Create a license and readme<a class="headerlink" href="#create-a-license-and-readme" title="Permalink to this headline">¶</a></h2>
+<h3>Create a license and readme<a class="headerlink" href="#create-a-license-and-readme" title="Permalink to this headline">¶</a></h3>
+<p>let people know how to use them.</p>
 </div>
-<div class="section" id="jupyter-book-things-you-are-reading-now-automated-github-actions">
-<h2>Jupyter Book (things you are reading now), automated Github Actions<a class="headerlink" href="#jupyter-book-things-you-are-reading-now-automated-github-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="automated-github-actions">
+<h3>Automated Github Actions<a class="headerlink" href="#automated-github-actions" title="Permalink to this headline">¶</a></h3>
+<p>save your time for publishing results.</p>
 </div>
-<div class="section" id="binder-run-your-work-with-just-one-click">
-<h2>Binder: run your work with just one click<a class="headerlink" href="#binder-run-your-work-with-just-one-click" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="environment-yml">
-<h3><code class="docutils literal notranslate"><span class="pre">environment.yml</span></code><a class="headerlink" href="#environment-yml" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="use-binder-to-share-and-reproduce-the-work-in-just-one-click">
+<h2>Use Binder to share and reproduce the work in just one click<a class="headerlink" href="#use-binder-to-share-and-reproduce-the-work-in-just-one-click" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://mybinder.org/">mybinder.org</a></p>
+<div class="section" id="set-environment-yml">
+<h3>Set <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code><a class="headerlink" href="#set-environment-yml" title="Permalink to this headline">¶</a></h3>
+<p>List of necessary packages.</p>
 </div>
 </div>
 </div>

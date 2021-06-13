@@ -1,13 +1,30 @@
-# Reproducibility
+# Publish and reproduce the work
 
-## Manage your entire work, not only the final paper
+## Manage the entire work, not only the final paper
 
-### Set .gitignore
+- Text-based report (academic papers, technical reports, etc.)
+- Source and derived data 
+- Code and workflow to generate results
+- Documentation (user guide, data availability statement, code comments, etc.)
 
-## Create a license and readme
+## Github and Zenodo
 
-## Jupyter Book (things you are reading now), automated Github Actions
+### Set `.gitignore`
 
-## Binder: run your work with just one click
+keep the core, skip the derived things.
 
-### `environment.yml`
+### Create a license and readme
+
+let people know how to use them.
+
+### Automated Github Actions
+
+save your time for publishing results.
+
+## Use Binder to share and reproduce the work in just one click
+
+[mybinder.org](https://mybinder.org/)
+
+### Set `environment.yml`
+
+List of necessary packages.
