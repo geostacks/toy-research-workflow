@@ -52,6 +52,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://geostacks.github.io/toy-research-workflow/icesat2-crevasses/reproduce.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Write a report" href="writeup.html" />
@@ -59,6 +60,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://geostacks.github.io/toy-research-workflow/icesat2-crevasses/reproduce.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Publish and reproduce the work" />
+<meta property="og:description" content="Publish and reproduce the work  Finally we have finished the analysis and the writeup, and now it is time to publish our work somewhere. For this case we choose" />
+<meta property="og:image"       content="https://geostacks.github.io/toy-research-workflow/_static/jupyter-earth.png" />
+
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -187,6 +197,24 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/geostacks/toy-research-workflow"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/geostacks/toy-research-workflow/issues/new?title=Issue%20on%20page%20%2Ficesat2-crevasses/reproduce.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/geostacks/toy-research-workflow/edit/main/docs/icesat2-crevasses/reproduce.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -307,7 +335,7 @@ keep the core, skip the derived things.
 <div class="section" id="use-binder-to-share-and-reproduce-the-work-in-just-one-click">
 <h2>Use Binder to share and reproduce the work in just one click<a class="headerlink" href="#use-binder-to-share-and-reproduce-the-work-in-just-one-click" title="Permalink to this headline">¶</a></h2>
 <p>To make this workflow as reproducive as possible, we use a cloud-based service called <a class="reference external" href="https://mybinder.org/">Binder</a>. The Binder service can turn a public repository into a live server where you can execute Notebooks, Python files, and other contents, as long as we provide a list of required packages (that is, <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>).</p>
-<p>We can use Binder independently for single or more Notebooks in a repository, as we have seen in many EarthCube submissions. We can also just use Jupyter Book to complie the work since Jupyter Book integrates the Binder service well. If the source file of a Jupyter Book page is Notebook, there will be a Binder link in the upper right of the page (Figure <span class="xref std std-ref">fig:fig:binder-link</span>) for readers to directly execute it.</p>
+<p>We can use Binder independently for single or more Notebooks in a repository, as we have seen in many EarthCube submissions. We can also just use Jupyter Book to complie the work since Jupyter Book integrates the Binder service well. If the source file of a Jupyter Book page is Notebook, there will be a Binder link in the upper right of the page (Figure <a class="reference internal" href="#fig-binder-link"><span class="std std-ref">For each Notebook page, the Binder link allows readers to execute it.</span></a>) for readers to directly execute it.</p>
 <div class="figure align-default" id="fig-binder-link">
 <img alt="../_images/find_binder_link.PNG" src="../_images/find_binder_link.PNG" />
 <p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">For each Notebook page, the Binder link allows readers to execute it.</span><a class="headerlink" href="#fig-binder-link" title="Permalink to this image">¶</a></p>
@@ -351,9 +379,9 @@ keep the core, skip the derived things.
     <div class="container">
       <p>
         
-          By The Jupyter Book community<br/>
+          By The Jupyter Meets the Earth Team<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
