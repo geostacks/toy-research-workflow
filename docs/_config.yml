@@ -25,6 +25,6 @@ launch_buttons:
   # thebe: true
   
 execute:
-  execute_notebooks : 'false'
+  execute_notebooks : 'off'
   timeout           : 30
   allow_errors      : false
