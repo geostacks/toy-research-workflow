@@ -66,7 +66,7 @@
 <meta property="og:url"         content="https://geostacks.github.io/toy-research-workflow/icesat2-crevasses/ideas.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Search for ideas" />
-<meta property="og:description" content="Search for ideas  A good reseach always starts from a good idea. Finding a good idea requires a lot of reading and thinking, which is usually the first step for" />
+<meta property="og:description" content="Search for ideas  Good research always starts with a good idea. Finding a good idea requires reading and thinking, which is usually the first step for a researc" />
 <meta property="og:image"       content="https://geostacks.github.io/toy-research-workflow/_static/jupyter-earth.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -265,27 +265,27 @@
                 
   <div class="section" id="search-for-ideas">
 <h1>Search for ideas<a class="headerlink" href="#search-for-ideas" title="Permalink to this headline">¶</a></h1>
-<p>A good reseach always starts from a good idea. Finding a good idea requires a lot of reading and thinking, which is usually the first step for a research project.</p>
+<p>Good research always starts with a good idea. Finding a good idea requires reading and thinking, which is usually the first step for a research project.</p>
 <div class="section" id="from-an-idea-to-a-plan">
 <h2>From an idea to a plan<a class="headerlink" href="#from-an-idea-to-a-plan" title="Permalink to this headline">¶</a></h2>
-<p>One day we noticed this paper written by <span id="id1">[<a class="reference internal" href="#id7"><span>HTL+21</span></a>]</span>: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2666017220300122">https://www.sciencedirect.com/science/article/pii/S2666017220300122</a>. It introduces an algorithm called <strong>DDA-ice</strong> for analyzing crevasse morphology using ICESat-2 laser altimetry data. This looks really useful because glacier crevasses can influence glacier hydrology, dynamics, and mass balance through multiple processes (e.g., <span id="id2">[<a class="reference internal" href="#id6"><span>CRA+16</span></a>]</span>). This paper seeks to prove that ICESat-2 data have a potential to derive crevasse evolution on glacier surface. We wonder if we can use DDA-ice or a similar tool and analyze the glaciers in our study area.</p>
+<p>One day we noticed this paper written by <span id="id1">[<a class="reference internal" href="#id7"><span>HTL+21</span></a>]</span>: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2666017220300122">https://www.sciencedirect.com/science/article/pii/S2666017220300122</a>. It introduces an algorithm called <strong>DDA-ice</strong> for analyzing crevasse morphology using ICESat-2 laser altimetry data. This looks useful because glacier crevasses can influence glacier hydrology, dynamics, and mass balance through multiple processes (e.g., <span id="id2">[<a class="reference internal" href="#id6"><span>CRA+16</span></a>]</span>). This paper seeks to prove that ICESat-2 data can monitor crevasse evolution on the glacier surface. We wonder if we can use DDA-ice or a similar tool and analyze the glaciers in our study area.</p>
 </div>
 <div class="section" id="challenges">
 <h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">¶</a></h2>
-<p>However, the authors didn’t release a copy of their DDA-ice package along with the paper. We typically have two solutions for this issue:</p>
+<p>However, the authors did not release a copy of their DDA-ice package along with the paper. We typically have two solutions for this issue:</p>
 <ol class="simple">
-<li><p>Email to the corresponding author and ask for the software and the documentation. Perhaps for future collaboration as well. This might ensure that the software and the previous work can be best credited, as well as the research quality using this package. However, it takes time for researchers to communicate in person or over emails, and the development of software and the data analysis might be slow compared the data collection rate.</p></li>
-<li><p>Adopt the ideas from the paper and develop your own code for the same purpose (crevasse analysis). This is usually more time-consuming than the first method, regardless of the skill level of the researchers. Also, there will be a lot of effort we need to do with this new package to avoid inventing the wheel the third time, such as publishing software, quality assessment, and writing document. Despite of this additional work, this approach might improve the research efficiency and community-based development for this particular tool if the right sharing scheme is established.</p></li>
+<li><p>Email the corresponding author and ask for the software and the documentation. Perhaps for future collaboration as well. This might ensure that the software and the previous work can be best credited and the research quality using this package. However, it takes time for researchers to communicate in person or over email, and the development of software and the data analysis might be slow compared to the data collection rate.</p></li>
+<li><p>Adopt the ideas from the paper and develop your own code for the same purpose (crevasse analysis). This is usually more time-consuming than the first method, regardless of the skill level of the researchers. Also, there will be a lot of effort we need to do with this new package to avoid inventing the wheel the third time, such as publishing software, quality assessment, and writing document. Despite this additional work, this approach might improve the research efficiency and community-based development for this particular tool if a suitable sharing scheme is established.</p></li>
 </ol>
-<p>Jupyter tools aims to provide such a scheme. The open-source tools in this ecosystem help make your work (including text, data, figures, and code) reusable, reproducible, and easily accessible to the other researchers.</p>
+<p>Jupyter tools aim to provide such a scheme. The open-source tools in this ecosystem help make your work (including text, data, figures, and code) reusable, reproducible, and easily accessible to other researchers.</p>
 </div>
 <div class="section" id="goals">
 <span id="sec-ideas-goals"></span><h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <p>For this toy workflow, we attempt to achieve these goals:</p>
 <ol class="simple">
-<li><p>Using the ideas from <span id="id3">[<a class="reference internal" href="#id7"><span>HTL+21</span></a>]</span>, Develop a research workflow for analyzing glacier crevasse mophorlogy using Jupyter tools.</p></li>
-<li><p>Reproduce Figure 6a of the same paper using exactly the same data source: ICESat-2 data over Negribreen, Svalbard, measured on August 5 2019.</p></li>
-<li><p>Document each step in the workflow and make them as accessible and reproducible as posssible.</p></li>
+<li><p>Using the ideas from <span id="id3">[<a class="reference internal" href="#id7"><span>HTL+21</span></a>]</span>, Develop a research workflow for analyzing glacier crevasse morphology using Jupyter tools.</p></li>
+<li><p>Reproduce Figure 6a of the same paper using the same data source: ICESat-2 data over Negribreen, Svalbard, measured on August 5, 2019.</p></li>
+<li><p>Document each step in the workflow and make them as accessible and reproducible as possible.</p></li>
 </ol>
 <div class="figure align-default" id="herzfeld-2021-fig6a">
 <a class="reference internal image-reference" href="../_images/Herzfeld_etal_SciRemoteSens_2021_fig6a.PNG"><img alt="../_images/Herzfeld_etal_SciRemoteSens_2021_fig6a.PNG" src="../_images/Herzfeld_etal_SciRemoteSens_2021_fig6a.PNG" style="height: 200px;" /></a>
